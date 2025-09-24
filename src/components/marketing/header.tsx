@@ -18,11 +18,12 @@ export function Header() {
           <div className="flex-shrink-0">
             <div className="flex items-center">
               <Image
-                src="/claro-logo.png"
+                src="/claro-logo-transparente-hd.png"
                 alt="Logo Claro"
                 className="h-16 w-auto"
                 width={64}
                 height={64}
+                priority
               />
             </div>
           </div>
