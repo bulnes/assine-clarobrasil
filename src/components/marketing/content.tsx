@@ -547,7 +547,7 @@ export function Content() {
                     ))}
                   </div>
                   <blockquote className="text-gray-700 italic mb-4">
-                    "{testimonial.text}"
+                    &quot;{testimonial.text}&quot;
                   </blockquote>
                   <div className="text-center">
                     <p className="font-medium text-gray-900">
