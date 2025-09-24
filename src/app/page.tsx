@@ -1,4 +1,5 @@
 import { Content } from "@/components/marketing/content";
+import { FloatingButton } from "@/components/marketing/floating-button";
 import { Footer } from "@/components/marketing/footer";
 import { Header } from "@/components/marketing/header";
 
@@ -10,9 +11,7 @@ export default function Home() {
         <Content />
       </main>
       <Footer />
-
-      {/* Botão flutuante do WhatsApp */}
-      {/* <WhatsAppFloatingButton /> */}
+      <FloatingButton />
     </div>
   );
 }
