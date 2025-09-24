@@ -1,4 +1,5 @@
 import { Content } from "@/components/marketing/content";
+import { Footer } from "@/components/marketing/footer";
 import { Header } from "@/components/marketing/header";
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
       <main>
         <Content />
       </main>
-      {/* <WhatsAppFooter /> */}
+      <Footer />
 
       {/* Botão flutuante do WhatsApp */}
       {/* <WhatsAppFloatingButton /> */}
