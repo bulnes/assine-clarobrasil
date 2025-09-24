@@ -1,7 +1,15 @@
+import { Header } from "@/components/marketing/header";
+
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-4xl font-bold underline">Hello World</h1>
+    <div className="min-h-screen bg-white">
+      {/* <WhatsAppHeader /> */}
+      <Header />
+      <main>{/* <WhatsAppLandingPage /> */}</main>
+      {/* <WhatsAppFooter /> */}
+
+      {/* Botão flutuante do WhatsApp */}
+      {/* <WhatsAppFloatingButton /> */}
     </div>
   );
 }
