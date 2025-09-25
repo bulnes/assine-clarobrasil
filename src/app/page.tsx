@@ -1,5 +1,5 @@
 import { Benefits } from "@/components/marketing/benefits";
-import { Content } from "@/components/marketing/content";
+import { ClaroClient } from "@/components/marketing/claro-client";
 import { Faq } from "@/components/marketing/faq";
 import { FinalCTA } from "@/components/marketing/final-cta";
 import { FloatingButton } from "@/components/marketing/floating-button";
@@ -22,8 +22,7 @@ export default function Home() {
         <Social />
         <Faq />
         <FinalCTA />
-
-        <Content />
+        <ClaroClient />
       </main>
       <Footer />
       <FloatingButton />

@@ -1,6 +1,5 @@
 "use client";
 
-import { ImageWithFallback } from "@/components/marketing/image-with-fallback";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -11,28 +10,18 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Building, Headphones, Home, Shield, Smartphone } from "lucide-react";
-import React from "react";
+import Image from "next/image";
+import { useState } from "react";
 
-export function Content() {
-  const [isContactDialogOpen, setIsContactDialogOpen] = React.useState(false);
-
-  const handleWhatsAppClick = () => {
-    // Simular redirecionamento para WhatsApp
-    console.log("Redirecionando para WhatsApp...");
-  };
-
-  const handleSaberMais = () => {
-    // Simular ação de saber mais
-    console.log("Saber mais sobre o serviço...");
-  };
+export function ClaroClient() {
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
   const handleContactDialogOpen = () => {
     setIsContactDialogOpen(true);
   };
 
   return (
-    <div className="bg-white">
-      {/* Já é cliente Claro? */}
+    <>
       <section className="py-16 bg-[#F7F7F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -66,10 +55,12 @@ export function Content() {
                   <div className="flex items-center space-x-6">
                     {/* QR Code */}
                     <div className="flex-shrink-0">
-                      <ImageWithFallback
-                        src="figma:asset/2296cdc8bd3b65d0894281322b6c5f0c0a9cb33d.png"
+                      <Image
+                        src="/placehold.svg"
                         alt="QR Code para download do App Minha Claro"
                         className="w-28 h-28 rounded-lg"
+                        width={112}
+                        height={112}
                       />
                     </div>
 
@@ -93,10 +84,12 @@ export function Content() {
 
                   {/* Lado direito - Imagem da mão com celular */}
                   <div className="flex-shrink-0 hidden sm:block">
-                    <ImageWithFallback
-                      src="figma:asset/ca4f82eea08c13c58153067049177f09413a7af2.png"
+                    <Image
+                      src="/placehold.svg"
                       alt="Mão segurando celular com app Minha Claro"
                       className="w-48 h-auto max-w-full"
+                      width={192}
+                      height={384}
                     />
                   </div>
                 </div>
@@ -163,7 +156,6 @@ export function Content() {
         </div>
       </section>
 
-      {/* Dialog para Centrais de Atendimento */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
@@ -325,6 +317,6 @@ export function Content() {
           </div>
         </DialogContent>
       </Dialog>
-    </div>
+    </>
   );
 }
