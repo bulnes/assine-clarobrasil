@@ -1,5 +1,6 @@
 import { Clock, Phone } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   const links = [
@@ -116,13 +117,15 @@ export function Footer() {
             <h3 className="text-lg font-bold mb-4">Atendimento</h3>
             <div className="space-y-3">
               {atendimento.map(({ label, sublabel }) => (
-                <div className="flex items-center space-x-2" key={label}>
-                  <Phone className="w-4 h-4 flex-shrink-0" />
-                  <div className="text-sm">
-                    <div className="font-medium">{label}</div>
-                    <div className="text-white/80">{sublabel}</div>
+                <Link href={`tel:${label.replace(/\s+/g, "")}`} key={label}>
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-4 h-4 flex-shrink-0" />
+                    <div className="text-sm">
+                      <div className="font-medium">{label}</div>
+                      <div className="text-white/80">{sublabel}</div>
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
 
               <div className="flex items-center space-x-2">

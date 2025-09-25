@@ -9,11 +9,15 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { getWhatsappLink } from "@/lib/utils";
 import { Building, Headphones, Home, Shield, Smartphone } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export function ClaroClient() {
+  const whatsappLink = getWhatsappLink();
+
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
   const handleContactDialogOpen = () => {
@@ -112,7 +116,10 @@ export function ClaroClient() {
                     <Home className="w-6 h-6 text-[#E60000] mt-1 stroke-2" />
                     <div>
                       <p className="text-gray-800 font-medium">Residencial:</p>
-                      <p className="text-gray-700">10621 / 10699</p>
+                      <p className="text-gray-700">
+                        <Link href="tel:10621">10621</Link> /{" "}
+                        <Link href="tel:10699">10699</Link>
+                      </p>
                     </div>
                   </div>
 
@@ -122,9 +129,15 @@ export function ClaroClient() {
                     <div>
                       <p className="text-gray-800 font-medium">Celular:</p>
                       <p className="text-gray-700">
-                        1052 /{" "}
+                        <Link href="tel:1052">1052</Link> /{" "}
                         <span className="text-[#E60000] underline cursor-pointer">
-                          WhatsApp
+                          <Link
+                            href={whatsappLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            WhatsApp
+                          </Link>
                         </span>
                       </p>
                     </div>
@@ -135,7 +148,10 @@ export function ClaroClient() {
                     <Building className="w-6 h-6 text-[#E60000] mt-1 stroke-2" />
                     <div>
                       <p className="text-gray-800 font-medium">Empresas:</p>
-                      <p className="text-gray-700">0800 721 1021 / 10321</p>
+                      <p className="text-gray-700">
+                        <Link href="tel:08007211021">0800 721 1021</Link> /{" "}
+                        <Link href="tel:10321">10321</Link>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -181,13 +197,17 @@ export function ClaroClient() {
                   <span className="text-gray-800">
                     Banda Larga, TV, Telefone Fixo e Claro Multi
                   </span>
-                  <span className="font-bold text-[#E60000]">10621</span>
+                  <span className="font-bold text-[#E60000]">
+                    <Link href="tel:10621">10621</Link>
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-800">
                     TV via Satélite e Internet via satélite
                   </span>
-                  <span className="font-bold text-[#E60000]">10699</span>
+                  <span className="font-bold text-[#E60000]">
+                    <Link href="tel:10699">10699</Link>
+                  </span>
                 </div>
               </div>
             </div>
@@ -205,14 +225,16 @@ export function ClaroClient() {
                   <span className="text-gray-800">
                     Celular (Pré Pago, Controle e Pós Pago) e Internet Móvel
                   </span>
-                  <span className="font-bold text-[#E60000]">1052</span>
+                  <span className="font-bold text-[#E60000]">
+                    <Link href="tel:1052">1052</Link>
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-800">
                     Atendimento Claro no Exterior
                   </span>
                   <span className="font-bold text-[#E60000]">
-                    +55 11 99199-5555
+                    <Link href="tel:+5511991995555">+55 11 99199-5555</Link>
                   </span>
                 </div>
               </div>
@@ -232,20 +254,26 @@ export function ClaroClient() {
                     PME Residencial - Banda Larga, TV, Telefone Fixo e Claro
                     Multi
                   </span>
-                  <span className="font-bold text-[#E60000]">10621</span>
+                  <span className="font-bold text-[#E60000]">
+                    <Link href="tel:10621">10621</Link>
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-800">
                     PME Residencial - TV via Satélite e Internet via Satélite
                   </span>
-                  <span className="font-bold text-[#E60000]">10699</span>
+                  <span className="font-bold text-[#E60000]">
+                    <Link href="tel:10699">10699</Link>
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-800">
                     PME Móvel - Celular (Pré Pago, Controle e Pós Pago) e
                     Internet Móvel
                   </span>
-                  <span className="font-bold text-[#E60000]">1052</span>
+                  <span className="font-bold text-[#E60000]">
+                    <Link href="tel:1052">1052</Link>
+                  </span>
                 </div>
               </div>
             </div>
@@ -262,14 +290,16 @@ export function ClaroClient() {
                 <div className="flex justify-between items-center">
                   <span className="text-gray-800">Todos os Produtos</span>
                   <span className="font-bold text-[#E60000]">
-                    0800 721 1021
+                    <Link href="tel:08007211021">0800 721 1021</Link>
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-800">
                     Produtos Longa Distância (LD21)
                   </span>
-                  <span className="font-bold text-[#E60000]">10321</span>
+                  <span className="font-bold text-[#E60000]">
+                    <Link href="tel:10321">10321</Link>
+                  </span>
                 </div>
               </div>
             </div>
@@ -286,7 +316,7 @@ export function ClaroClient() {
                 <div className="flex justify-between items-center">
                   <span className="text-gray-800">Todos os Produtos</span>
                   <span className="font-bold text-[#E60000]">
-                    0800 701 0180
+                    <Link href="tel:08007010180">0800 701 0180</Link>
                   </span>
                 </div>
               </div>
