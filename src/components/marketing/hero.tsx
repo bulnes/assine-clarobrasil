@@ -44,7 +44,7 @@ export function Hero() {
             <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#25D366] hover:bg-[#1ea952] text-white text-xl px-10 py-5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 inline-flex items-center">
                 <MessageCircle className="w-5 h-5 mr-3" />
-                Conhecer os Planos Claro
+                Conhecer os planos Claro
                 <ArrowRight className="w-5 h-5 ml-3" />
               </Button>
             </Link>
@@ -75,7 +75,7 @@ export function Hero() {
               >
                 <Button className="bg-[#25D366] hover:bg-[#1ea952] text-white text-xl px-10 py-5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 inline-flex items-center w-full max-w-[330px]">
                   <MessageCircle className="w-5 h-5 mr-3" />
-                  Conhecer os Planos Claro
+                  Conhecer os planos Claro
                   <ArrowRight className="w-5 h-5 ml-3" />
                 </Button>
               </Link>

@@ -30,7 +30,7 @@ export function Header() {
             <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#25D366] hover:bg-[#1ea952] text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center">
                 <MessageCircle className="w-4 h-4 mr-3" />
-                Conhecer os Planos Claro
+                Conhecer os planos Claro
                 <ArrowRight className="w-4 h-4 ml-3" />
               </Button>
             </Link>
