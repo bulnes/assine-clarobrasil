@@ -82,9 +82,9 @@ export function Footer() {
               <Image
                 src="/claro-logo-transparente-hd.png"
                 alt=""
-                className="h-12 w-auto"
-                width={48}
-                height={48}
+                className="h-16 w-auto"
+                width={64}
+                height={64}
                 priority
               />
             </div>
