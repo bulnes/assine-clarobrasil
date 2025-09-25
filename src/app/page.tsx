@@ -1,3 +1,4 @@
+import { Benefits } from "@/components/marketing/benefits";
 import { Content } from "@/components/marketing/content";
 import { FloatingButton } from "@/components/marketing/floating-button";
 import { Footer } from "@/components/marketing/footer";
@@ -17,6 +18,8 @@ export default function Home() {
         <Hire />
         {/* Como Funciona */}
         <HowItWorks />
+        {/* Benefícios */}
+        <Benefits />
         <Content />
       </main>
       <Footer />
