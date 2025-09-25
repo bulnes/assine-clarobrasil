@@ -10,15 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import {
-  ArrowRight,
-  Building,
-  Headphones,
-  Home,
-  MessageCircle,
-  Shield,
-  Smartphone,
-} from "lucide-react";
+import { Building, Headphones, Home, Shield, Smartphone } from "lucide-react";
 import React from "react";
 
 export function Content() {
@@ -40,33 +32,6 @@ export function Content() {
 
   return (
     <div className="bg-white">
-      {/* CTA Final */}
-      <section className="py-20 bg-gradient-to-r from-black to-gray-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Pronto para assinar Claro em minutos?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Nossa IA está online agora e pronta para te atender!
-          </p>
-
-          <Button
-            onClick={handleWhatsAppClick}
-            className="bg-[#25D366] hover:bg-[#1ea952] text-white text-xl px-10 py-5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 inline-flex items-center"
-          >
-            <MessageCircle className="w-5 h-5 mr-3" />
-            Conhecer os Planos Claro
-            <ArrowRight className="w-5 h-5 ml-3" />
-          </Button>
-
-          <div className="mt-8 flex justify-center items-center space-x-4 text-gray-300">
-            <span className="text-sm">✅ Rápido</span>
-            <span>•</span>
-            <span className="text-sm">✅ Seguro</span>
-          </div>
-        </div>
-      </section>
-
       {/* Já é cliente Claro? */}
       <section className="py-16 bg-[#F7F7F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

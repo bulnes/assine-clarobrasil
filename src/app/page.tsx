@@ -1,6 +1,7 @@
 import { Benefits } from "@/components/marketing/benefits";
 import { Content } from "@/components/marketing/content";
 import { Faq } from "@/components/marketing/faq";
+import { FinalCTA } from "@/components/marketing/final-cta";
 import { FloatingButton } from "@/components/marketing/floating-button";
 import { Footer } from "@/components/marketing/footer";
 import { Header } from "@/components/marketing/header";
@@ -14,18 +15,14 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Header />
       <main className="bg-white">
-        {/* Seção Hero */}
         <Hero />
-        {/* O que você pode contratar */}
         <Hire />
-        {/* Como Funciona */}
         <HowItWorks />
-        {/* Benefícios */}
         <Benefits />
-        {/* Prova Social */}
         <Social />
-        {/* FAQ */}
         <Faq />
+        <FinalCTA />
+
         <Content />
       </main>
       <Footer />
