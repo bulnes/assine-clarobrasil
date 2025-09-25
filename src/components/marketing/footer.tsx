@@ -1,15 +1,18 @@
+import { getWhatsappLink } from "@/lib/utils";
 import { Clock, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
+  const whatsappLink = getWhatsappLink();
+
   const links = [
     {
-      link: "https://www.claro.com.br/atendimento",
+      link: whatsappLink,
       label: "Planos e Ofertas",
     },
     {
-      link: "https://www.claro.com.br/atendimento",
+      link: whatsappLink,
       label: "Cobertura",
     },
     {
