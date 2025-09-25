@@ -1,7 +1,76 @@
-import { ImageWithFallback } from "@/components/marketing/image-with-fallback";
 import { Clock, Phone } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
+  const links = [
+    {
+      link: "https://www.claro.com.br/atendimento",
+      label: "Planos e Ofertas",
+    },
+    {
+      link: "https://www.claro.com.br/atendimento",
+      label: "Cobertura",
+    },
+    {
+      link: "https://www.claro.com.br/atendimento",
+      label: "App Minha Claro",
+    },
+    {
+      link: "https://www.claro.com.br/atendimento",
+      label: "Segunda Via da Conta",
+    },
+    {
+      link: "https://www.claro.com.br/atendimento",
+      label: "Suporte Técnico",
+    },
+  ];
+
+  const atendimento = [
+    {
+      label: "*1052",
+      sublabel: "Clientes de Celular",
+    },
+    {
+      label: "10621",
+      sublabel: "Clientes do Residencial",
+    },
+    {
+      label: "0800 721 1021",
+      sublabel: "Clientes Empresa",
+    },
+    {
+      label: "0800 036 2525",
+      sublabel: "Vendas",
+    },
+  ];
+
+  const socialLinks = [
+    {
+      href: "https://www.facebook.com/clarobrasil",
+      label: "Facebook",
+    },
+    {
+      href: "https://www.instagram.com/clarobrasil/",
+      label: "Instagram",
+    },
+    {
+      href: "https://x.com/clarobrasil",
+      label: "X",
+    },
+    {
+      href: "https://www.youtube.com/user/clarobrasil",
+      label: "YouTube",
+    },
+    {
+      href: "https://www.linkedin.com/company/clarobrasil",
+      label: "LinkedIn",
+    },
+    {
+      href: "https://www.tiktok.com/@clarobrasil",
+      label: "TikTok",
+    },
+  ];
+
   return (
     <footer className="bg-[#E30613] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -9,10 +78,13 @@ export function Footer() {
           {/* Coluna 1 - Logo e Sobre a Claro */}
           <div className="space-y-4">
             <div className="mb-4">
-              <ImageWithFallback
-                src="figma:asset/f144c56e9afe6b949b7eae4153c2958426a84ba4.png"
-                alt="Logo Claro"
+              <Image
+                src="/claro-logo-transparente-hd.png"
+                alt=""
                 className="h-12 w-auto"
+                width={48}
+                height={48}
+                priority
               />
             </div>
             <p className="text-sm text-white/90 leading-relaxed">
@@ -24,56 +96,18 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold mb-4">Links Úteis</h3>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="https://www.claro.com.br/atendimento"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-white/90 hover:text-white transition-colors"
-                >
-                  Planos e Ofertas
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.claro.com.br/atendimento"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-white/90 hover:text-white transition-colors"
-                >
-                  Cobertura
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.claro.com.br/atendimento"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-white/90 hover:text-white transition-colors"
-                >
-                  App Minha Claro
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.claro.com.br/atendimento"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-white/90 hover:text-white transition-colors"
-                >
-                  Segunda Via da Conta
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.claro.com.br/atendimento"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-white/90 hover:text-white transition-colors"
-                >
-                  Suporte Técnico
-                </a>
-              </li>
+              {links.map(({ link, label }) => (
+                <li key={label}>
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-white/90 hover:text-white transition-colors"
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -81,37 +115,15 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold mb-4">Atendimento</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 flex-shrink-0" />
-                <div className="text-sm">
-                  <div className="font-medium">*1052</div>
-                  <div className="text-white/80">Clientes de Celular</div>
+              {atendimento.map(({ label, sublabel }) => (
+                <div className="flex items-center space-x-2" key={label}>
+                  <Phone className="w-4 h-4 flex-shrink-0" />
+                  <div className="text-sm">
+                    <div className="font-medium">{label}</div>
+                    <div className="text-white/80">{sublabel}</div>
+                  </div>
                 </div>
-              </div>
-
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 flex-shrink-0" />
-                <div className="text-sm">
-                  <div className="font-medium">10621</div>
-                  <div className="text-white/80">Clientes do Residencial</div>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 flex-shrink-0" />
-                <div className="text-sm">
-                  <div className="font-medium">0800 721 1021</div>
-                  <div className="text-white/80">Clientes Empresa</div>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 flex-shrink-0" />
-                <div className="text-sm">
-                  <div className="font-medium">0800 036 2525</div>
-                  <div className="text-white/80">Vendas</div>
-                </div>
-              </div>
+              ))}
 
               <div className="flex items-center space-x-2">
                 <Clock className="w-4 h-4 flex-shrink-0" />
@@ -124,54 +136,17 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold mb-4">Siga a Claro</h3>
             <div className="space-y-2">
-              <a
-                href="https://www.facebook.com/clarobrasil"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-white/90 hover:text-white transition-colors block"
-              >
-                Facebook
-              </a>
-              <a
-                href="https://www.instagram.com/clarobrasil/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-white/90 hover:text-white transition-colors block"
-              >
-                Instagram
-              </a>
-              <a
-                href="https://x.com/clarobrasil"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-white/90 hover:text-white transition-colors block"
-              >
-                X
-              </a>
-              <a
-                href="https://www.youtube.com/user/clarobrasil"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-white/90 hover:text-white transition-colors block"
-              >
-                YouTube
-              </a>
-              <a
-                href="https://www.linkedin.com/company/clarobrasil"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-white/90 hover:text-white transition-colors block"
-              >
-                LinkedIn
-              </a>
-              <a
-                href="https://www.tiktok.com/@clarobrasil"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-white/90 hover:text-white transition-colors block"
-              >
-                TikTok
-              </a>
+              {socialLinks.map(({ href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/90 hover:text-white transition-colors block"
+                >
+                  {label}
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -180,7 +155,7 @@ export function Footer() {
         <div className="border-t border-white/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-white/80 text-center md:text-left">
-              © 2025 Claro S.A. Todos os direitos reservados.
+              &copy; 2025 Claro S.A. Todos os direitos reservados.
             </div>
             <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm text-white/80">
               <a
