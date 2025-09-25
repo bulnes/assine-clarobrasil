@@ -1,12 +1,6 @@
 "use client";
 
 import { ImageWithFallback } from "@/components/marketing/image-with-fallback";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -24,7 +18,6 @@ import {
   MessageCircle,
   Shield,
   Smartphone,
-  Star,
 } from "lucide-react";
 import React from "react";
 
@@ -45,129 +38,8 @@ export function Content() {
     setIsContactDialogOpen(true);
   };
 
-  const testimonials = [
-    {
-      name: "Ana Paula",
-      location: "São Paulo, SP",
-      rating: 5,
-      text: "Super fácil! Assinei pelo WhatsApp em 5 minutos. A IA da Claro é muito eficiente!",
-    },
-    {
-      name: "Carlos Santos",
-      location: "Rio de Janeiro, RJ",
-      rating: 5,
-      text: "Incrível como é rápido. Não precisei sair de casa e já estava navegando na Claro.",
-    },
-    {
-      name: "Marina Costa",
-      location: "Belo Horizonte, MG",
-      rating: 5,
-      text: "Melhor experiência de contratação que já tive. Recomendo!",
-    },
-  ];
-
-  const faqItems = [
-    {
-      question: "Como funciona o atendimento via WhatsApp?",
-      answer:
-        "Nossa inteligência artificial responde suas dúvidas 24h por dia pelo WhatsApp. Você pode consultar planos, verificar cobertura e até mesmo finalizar sua assinatura.",
-    },
-    {
-      question: "É seguro contratar pelo WhatsApp?",
-      answer:
-        "Sim, totalmente seguro. Utilizamos criptografia de ponta a ponta e todos os processos seguem os padrões de segurança da Claro.",
-    },
-    {
-      question: "Posso falar com um atendente humano se precisar?",
-      answer:
-        "Claro! Se a IA não conseguir resolver sua dúvida, você será direcionado para um atendente humano especializado.",
-    },
-    {
-      question: "Quais planos posso contratar pelo WhatsApp?",
-      answer:
-        "Todos os nossos planos estão disponíveis: internet fibra, móvel, TV por assinatura e combos. Nossa IA te ajuda a escolher o ideal.",
-    },
-    {
-      question: "Quanto tempo demora para ativar meu plano?",
-      answer:
-        "Após a confirmação da contratação, a ativação é imediata para planos móveis. Para fibra, agendamos a instalação em até 5 dias úteis.",
-    },
-  ];
-
   return (
     <div className="bg-white">
-      {/* Prova Social */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Mais de <span className="text-[#E30613]">100 milhões</span> de
-              brasileiros já assinaram a{" "}
-              <span className="text-[#E30613]">Claro</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-gray-50 border-gray-200">
-                <CardContent className="p-6">
-                  <div className="flex justify-center mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 text-yellow-400 fill-current"
-                      />
-                    ))}
-                  </div>
-                  <blockquote className="text-gray-700 italic mb-4">
-                    &quot;{testimonial.text}&quot;
-                  </blockquote>
-                  <div className="text-center">
-                    <p className="font-medium text-gray-900">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      {testimonial.location}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Dúvidas Frequentes
-            </h2>
-            <p className="text-xl text-gray-600">
-              Esclarecemos as principais dúvidas sobre nosso atendimento
-            </p>
-          </div>
-
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqItems.map((item, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="bg-white border border-gray-200 rounded-lg px-6 shadow-sm"
-              >
-                <AccordionTrigger className="text-left hover:text-[#E30613] py-4">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-600 pb-4">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-
       {/* CTA Final */}
       <section className="py-20 bg-gradient-to-r from-black to-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

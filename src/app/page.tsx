@@ -1,11 +1,13 @@
 import { Benefits } from "@/components/marketing/benefits";
 import { Content } from "@/components/marketing/content";
+import { Faq } from "@/components/marketing/faq";
 import { FloatingButton } from "@/components/marketing/floating-button";
 import { Footer } from "@/components/marketing/footer";
 import { Header } from "@/components/marketing/header";
 import { Hero } from "@/components/marketing/hero";
 import { Hire } from "@/components/marketing/hire";
 import { HowItWorks } from "@/components/marketing/how-it-works";
+import { Social } from "@/components/marketing/social";
 
 export default function Home() {
   return (
@@ -20,6 +22,10 @@ export default function Home() {
         <HowItWorks />
         {/* Benefícios */}
         <Benefits />
+        {/* Prova Social */}
+        <Social />
+        {/* FAQ */}
+        <Faq />
         <Content />
       </main>
       <Footer />
