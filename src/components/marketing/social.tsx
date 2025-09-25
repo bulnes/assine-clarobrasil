@@ -46,7 +46,7 @@ export function Social() {
                     />
                   ))}
                 </div>
-                <blockquote className="text-gray-700 italic mb-4">
+                <blockquote className="text-gray-700 italic mb-4 text-center">
                   &quot;{testimonial.text}&quot;
                 </blockquote>
                 <div className="text-center">
