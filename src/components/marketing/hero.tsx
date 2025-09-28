@@ -16,12 +16,11 @@ export function Hero() {
           <div className="flex justify-center mb-4">
             <div className="w-full max-w-xs">
               <Image
-                src="/whatsapp-photo.jpeg"
+                src="/hero-image.svg"
                 alt=""
-                className="w-full h-48 object-cover object-center rounded-2xl shadow-xl"
+                className="w-full object-cover object-center"
                 height={192}
                 width={1080}
-                priority
               />
             </div>
           </div>
@@ -58,7 +57,7 @@ export function Hero() {
 
         {/* Layout Desktop - Original */}
         <div className="hidden lg:grid grid-cols-2 gap-8 items-center">
-          <div className="text-left">
+          <div className="text-left min-w-2xl">
             <h1 className="text-6xl font-bold text-gray-900 mb-4">
               Assine a <span className="text-[#E30613]">Claro</span> direto pelo
               WhatsApp
@@ -88,12 +87,11 @@ export function Hero() {
 
           <div className="flex justify-center">
             <Image
-              src="/whatsapp-photo.jpeg"
+              src="/hero-image.svg"
               alt=""
-              className="w-full max-w-sm rounded-3xl shadow-2xl"
+              className="w-full max-w-2xl h-auto object-cover object-center"
               height={192}
               width={1080}
-              priority
             />
           </div>
         </div>
