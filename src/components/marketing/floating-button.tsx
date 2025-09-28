@@ -92,7 +92,7 @@ export function FloatingButton() {
           {/* Versão expandida */}
           {isExpanded && (
             <div
-              className={`relative bg-[#25D366] rounded-2xl flex flex-col justify-center drop-shadow-lg drop-shadow-[#25D366]/50 w-[267px] -mr-16 -mt-4`}
+              className={`relative bg-[#25D366] rounded-2xl flex flex-col justify-center drop-shadow-lg drop-shadow-[#25D366]/50 w-[277px] -mr-16 -mt-4`}
             >
               <span className="flex items-center justify-between border-b border-white/30 px-4 py-2">
                 <span className="flex items-center justify-start gap-2 text-left">
@@ -107,7 +107,7 @@ export function FloatingButton() {
                 </span>
               </span>
 
-              <span className="flex flex-col justify-center px-4 py-1 pr-20 h-20">
+              <span className="flex flex-col justify-center px-4 py-1 h-20">
                 <span className="text-white text-lg font-bold text-left">
                   Desconto Especial
                 </span>
