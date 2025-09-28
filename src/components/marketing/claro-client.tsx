@@ -60,11 +60,11 @@ export function ClaroClient() {
                     {/* QR Code */}
                     <div className="flex-shrink-0">
                       <Image
-                        src="/placehold.svg"
+                        src="/qrcode.png"
                         alt="QR Code para download do App Minha Claro"
-                        className="w-28 h-28 rounded-lg"
-                        width={112}
-                        height={112}
+                        className="w-32 h-32 rounded-lg"
+                        width={128}
+                        height={128}
                       />
                     </div>
 
@@ -80,9 +80,15 @@ export function ClaroClient() {
                         ou Clique abaixo
                       </p>
 
-                      <Button className="bg-[#E60000] hover:bg-[#CC0000] text-white px-6 py-2 rounded-lg transition-colors duration-200 w-fit">
-                        Baixar App
-                      </Button>
+                      <Link
+                        href="https://claro-e.com/K0XyB"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button className="bg-[#E60000] hover:bg-[#CC0000] text-white px-6 py-2 rounded-lg transition-colors duration-200 w-fit">
+                          Baixar App
+                        </Button>
+                      </Link>
                     </div>
                   </div>
 
