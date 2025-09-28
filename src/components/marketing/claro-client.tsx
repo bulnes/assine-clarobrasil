@@ -95,9 +95,9 @@ export function ClaroClient() {
                   {/* Lado direito - Imagem da mão com celular */}
                   <div className="flex-shrink-0 hidden sm:block">
                     <Image
-                      src="/placehold.svg"
+                      src="/hero-image.svg"
                       alt="Mão segurando celular com app Minha Claro"
-                      className="w-48 h-auto max-w-full"
+                      className="w-48 max-w-full"
                       width={192}
                       height={384}
                     />
