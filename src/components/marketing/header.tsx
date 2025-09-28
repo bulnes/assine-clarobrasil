@@ -34,7 +34,7 @@ export function Header() {
               rel="noopener noreferrer"
             >
               <Button className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-[260px]">
-                Suporte
+                Falar com o suporte
               </Button>
             </Link>
 
