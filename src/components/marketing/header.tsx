@@ -34,7 +34,8 @@ export function Header() {
               rel="noopener noreferrer"
             >
               <Button className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-[260px]">
-                Falar com o suporte
+                <MessageCircle className="w-4 h-4" />
+                <span>Falar com o suporte</span>
               </Button>
             </Link>
 
